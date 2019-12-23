@@ -1,3 +1,7 @@
+///Summary: This script is meant to submit posts to the password recovery
+///of the juice shop app from OWASP. It can be modified to submit posts
+///to any other site though.
+
 //config vars
 const fs = require('fs');
 const http = require('http');
@@ -56,7 +60,7 @@ main.on('siteOnline', ()=>{
                 console.log('Post Successful');
             }
             else{
-                console.log('recieved status', postResp.statusCode);
+                console.log('recieved status:', postResp.statusCode);
             }
         });
         formSub.on('data', (formData)=>{
